@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l-vsp&*k41y(p+jkwfsp7fvlgg0-j5!0&4!x5qvfr^9n3ny2(8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = ['*']
 
 STATIC_URL ='/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
