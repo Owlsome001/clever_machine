@@ -1,0 +1,262 @@
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  body a{
+    color: #47b2e4;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #73c5eb;
+    text-decoration: none;
+  }
+
+#header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    padding-right: 15%;
+    padding-right: 10%;
+  }
+  
+  #header.header-scrolled,
+  #header.header-inner-pages {
+    background: rgba(40, 58, 90, 0.9);
+  }
+  
+  #header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #header .logo a {
+    color: #fff;
+  }
+  
+  #header .logo img {
+    max-height: 55px;
+    margin-left: 50%;
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #47b2e4;
+  }
+  
+  .navbar .getstarted,
+  .navbar .getstarted:focus {
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    border: 2px solid #47b2e4;
+    font-weight: 300;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .navbar .getstarted:hover,
+  .navbar .getstarted:focus:hover {
+    color: rgb(255, 255, 255);
+    background: #31a9e1;
+  }
+  
+  
+  /**
+  * Mobile Navigation 
+  */
+  .mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
+  
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(40, 58, 90, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+  }
+  
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #37517e;
+  }
+  
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover>a {
+    color: #47b2e4;
+  }
+  
+  .navbar-mobile .getstarted,
+  .navbar-mobile .getstarted:focus {
+    margin: 15px;
+    color: #37517e;
+  }
+
+  #header .navbar .account{
+    margin-left: 20%;
+    margin-right: 10%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+  }
+
+  #header .navbar .account .account-info{
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    display: inline;
+  }
+  #header .navbar .account .account-info p{
+  
+  }
+
+
+  #header .navbar .account .account-option{
+    display: none;
+    position: absolute;
+    /* left: 10px; */
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+
+  #header .navbar .account .account-option a {
+    padding-left: 0px;
+  }
+
+  /* Dropdown menu */
+  #header .navbar .account:hover .account-option{
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 125px;
+    padding-left: 0px;
+    height: fit-content;
+  }
+
+  #header .navbar .account .account-option .option{
+      width: 100%;
+      display: flex;
+      padding: 0px;
+      padding-top: 10px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding-left: 10px;
+      border-bottom: 1px solid black ;
+    
+  }
+  #header .navbar .account .account-option .option:hover {
+   background-color: rgba(0, 0, 0, 0.589);
+   color: white;
+}
+  
+#header .navbar .account .account-option .option p{
+    padding-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+  

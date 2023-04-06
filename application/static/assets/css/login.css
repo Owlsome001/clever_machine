@@ -1,0 +1,23 @@
+#login{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+#login:hover{
+  background-color: rgba(0, 0, 0, 0.253);
+}
+
+.connexion{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.create-account{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+

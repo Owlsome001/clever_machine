@@ -1,0 +1,94 @@
+
+.section-projects{ 
+    width: 60%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid rgba(41, 41, 41, 0.452);
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.section-projects #create{ 
+  background-color: rgba(0, 0, 0, 0.534);
+  border: none;
+  height: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+.section-projects #create:hover{ 
+  background-color: rgba(0, 0, 0, 0.699);
+}
+
+.section-projects .form-popup{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  widows: 500px;
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 40%;
+  right: 40%;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  z-index: 9;
+}
+
+.section-projects .form-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.section-projects .form-container .btn{
+background-color: #04AA6D;
+color:white;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+margin-bottom: 10px;
+opacity: 0.8;
+border-radius: 10px;
+}
+
+.section-projects .form-container input[type=text]{
+  border: none;
+  background: #f1f1f1;
+  margin: 5px 0 22px 0;
+  width: 100%;
+  }
+
+.section-projects a{
+    color: black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+  .section-projects .form-container input[type=text]:focus{
+    outline: none;
+    }
+
+.section-projects .form-container .cancel{
+  background-color: red;
+  }
+
+.section-projects .form-container .btn:hover , .section-projects .create-project:hover {
+      opacity: 1;
+    } 
+
+
+.project{
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    background-color: rgba(128, 128, 128, 0.219);
+}
+.project div{
+  padding-left: 5%;
+}
+.project div h2{
+    color: cornflowerblue;
+}

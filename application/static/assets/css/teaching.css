@@ -1,0 +1,223 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  body a{
+    color: #47b2e4;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #73c5eb;
+    text-decoration: none;
+  }
+
+section{
+    display: flex;
+    width: 80%;
+    margin:10%;
+    margin-top: 5%;
+}
+
+section .dataset{
+    box-shadow: darkslategray 1px 2px 5px;
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 5%;
+    
+}
+
+section .dataset #settings{
+   display: none;
+    
+}
+
+
+section .dataset .title, .trainning .title, .teaching .test p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267) ;
+    padding: 20px;
+}
+
+section .dataset .text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+
+section .dataset p{
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 2px;
+}
+section .dataset .features,
+section .dataset .target
+{
+    border-top: 1px solid rgba(0, 0, 0, 0.267);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section .dataset .target label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+}
+
+section .dataset .target select{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+}
+section .dataset .target select option{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+#features{
+    padding-left: 20px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#features p{
+    padding :1%;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.267);
+}
+#features p:hover{
+    background-color:  #73c5eb3f;
+    cursor: pointer;
+}
+
+section .trainning{
+    box-shadow: darkslategray 1px 2px 5px;
+    width: 20%;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-top: 12%;
+}
+
+section .dataset .target{
+    padding-bottom: 20px;
+}
+
+section .test{
+    box-shadow: darkslategray 1px 2px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 25%;
+    min-height: 200px;
+    height: fit-content;
+    border-radius: 10px;
+    margin-top: 5%;
+    
+}
+section .test #result {
+    display: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 2%;
+    
+}
+
+section .test #download {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.teaching .test p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.teaching .test progress {
+    margin-left: 10%;
+    height: 20px;
+    width: 80%;
+  
+    
+}
+
+.teaching .test progress::-moz-progress-bar, 
+.teaching .test progress::-webkit-progress-bar,
+.teaching .test progress
+ {
+   
+    background: greenyellow;
+}
+
+.teaching .test label {
+    margin-left: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.upload{
+    margin-left: 10%;
+}
+
+.upload button{
+    display:block; 
+    width: 100px; 
+    height: 60px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    border-radius: 5px;
+    border: none;
+}
+
+.upload button:hover{
+    background-color: #73c5eb3f;
+}
+
+.trainning .teach{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    height: 20%;
+    border-radius: 10px;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.trainning .teach:hover{
+    background-color: #73c5eb3f;
+    
+}
+
+/* Test Zone */
+
+#download{
+    border:none;
+}
+
+#download:hover{
+    cursor: pointer;
+    border:none;
+    background: #73c5eb7a;
+}
+
+
+
+@media (max-width: 661px) {
+    .teaching{
+        display: flex;
+        flex-direction: column;
+    }
+    section .dataset, section .trainning , section .test{
+        width: 100%;
+    }
+}
