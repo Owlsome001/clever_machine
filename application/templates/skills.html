@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clever Computer</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style-skill.css' %}">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+</head>
+<body>
+        {% include 'header.html' %}
+            <section class="new-skill">
+                <h1>New Skill</h1>
+                <div class="skills">
+                    <a href="/teaching?type=simple-linear">
+                        <div class="skill">
+                            <div>
+                              <img src="{% static 'assets/img/simple_lr.png' %}" alt="" class="skill_image">
+                            </div>
+                            <h3>Simple linear regression</h3>
+                            <p>With this skill the computer will find by it own the relationship between a feature and a target.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="/teaching?type=multiple-linear-regression">
+                    <div class="skill">
+                        <div>
+                          <img src="{% static 'assets/img/multiple_lr.webp' %}" alt="" class="skill_image">
+                        </div>
+                        <h3>Multiple linear regression</h3>
+                        <p>No matter how many features you will have. The computer will find a way to link features to a target.</p>
+                    </div>
+                    </a>
+
+                    <a href="/teaching?type=classification">
+                    <div class="skill">
+                        <div>
+                            <img src="{% static 'assets/img/classification.png' %}" alt="" class="skill_image">
+                        </div>
+                        <h3>Classification</h3>
+                        <p>The computer will learn how to sort your old data and predict in which group the new data will belong to.</p>
+                    </div>
+                    </a>
+                    
+                </div>
+                <div class="more-skill">
+
+                  <h3>More comming soon</h3>
+
+                  <p>We are working on new skills</p>
+
+                </div>
+
+            </section>
+
+            <script src="{% static 'assets/js/main.js' %}"></script>
+    
+</body>
+</html>

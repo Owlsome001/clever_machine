@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clever Computer</title>
+    <link rel="stylesheet" href="{% static 'assets/css/teaching.css' %}">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+</head>
+<body>
+  {% csrf_token %}
+  {% include 'header.html' %}
+        <section class="teaching">
+            <div class="dataset" id="dataset">
+                <p class="title">Dataset</p>
+                <p class="text">Add text samples: </p>
+                <div class="upload">
+                  <button onclick="document.getElementById('samples').click()"><i class="bi bi-upload " style="font-size: 20px;"></i><br>Upload</button>
+                  <input type="file" id="samples" accept=".csv" style="visibility: hidden;">
+                </div>
+                <div id="settings">
+                  <div class="features" >
+                    <p>Features:</p>
+                    <div id="features">
+  
+                    </div>
+                  </div>
+                  <div class="target">
+                      <p>Target:</p>
+                      <label for="target" >Select your target : </label>
+                      <select name="target" id="target">
+                      </select>
+                  </div>
+                </div>
+                
+            </div>
+            
+            <div class="trainning">
+                <p class="title">Teaching</p>
+                <span class="line"></span>
+
+                <button class="teach" id="teach">Teach Skill</button>
+            </div>
+            
+            <div class="test">
+                <p class="title">Testing</p>
+                <span class="line"></span>
+                
+                <div id="result">
+                  <label id="label1" for="progress1"></label>
+                  <progress id="progress1" max="100" value="0"></progress>
+                  <label id="label2" for="label1"></label>
+                  <progress id="progress2" max="100" value="0"></progress>
+                  <label id="label3" for="progress3"></label>
+                  <progress id="progress3" max="100" value="0"></progress>
+                  <a href="/download-skill">
+                  <button id="download">Download Skill</button>
+                  </a>
+              </div>
+                
+            </div>
+        </section>
+    
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>

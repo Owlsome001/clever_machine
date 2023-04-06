@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clever Compter | Sign in </title>
+    <link rel="stylesheet" href="{% static 'assets/css/register.css' %}">
+</head>
+<body> 
+    <div style="width: 30%; margin-left: 35%; margin-right: 35%; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; padding-top: 10%;">
+        <h1>Sign Up</h1>
+        <form autocomplete="off" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+
+                <div class="fieldWrapper" style="padding: 10px; display: flex; flex-direction: column;" >
+                    {{field.errors}}
+                    <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;" for="{{field.id_for_label}}">{{field.label_tag}}</label>
+                    <input  style="height: 30px; border: none;border-radius: 15px; border-bottom: 1px solid black; padding-left: 30px; font-size:16px;" type="{{field.widget_type}}" name="{{field.html_name}}" id="{{field.id_for_label}}" required>
+
+                </div>
+
+
+            {% endfor %}
+            
+            <input id="term" type="checkbox" style="font-size: 15px;">
+            <label for="term">I agree all statements in <a href="#">Terms of service</a></label>
+            <button id="sign-up" type="submit" >Register</button>
+            <a href="{% url 'login' %}">I'm already a member</a>
+        </form>
+          
+    </div>
+  
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clever Computer</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+</head>
+<body>
+    {% include 'header.html' %}
+    <section id="welcome" class="welcome-section">
+        <div class="welcome-text">
+            <h1>Clever Computer</h1>
+            <h2>Train a skillfull computer with old data</h2>
+            <p>A flexible and fast way to build machine learnig models for your sites, apps, and more - no coding competence required.</p>
+            <a href="/skills">
+            <div class="getstarted">
+                <p>Get Started</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                <img src="{% static 'assets/img/ml_service.png' %}" class="ml_service" alt="">
+        </div>
+    </section>
+</body>
+</html>

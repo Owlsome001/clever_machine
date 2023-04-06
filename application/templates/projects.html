@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clever Compter | {{user.username}}</title>
+    <link rel="stylesheet" href="{% static 'assets/css/project.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    
+    <section class="section-projects">
+        <button id="create" class="create-project" onclick="OpenForm()"><i class="bi bi-plus"></i>New Project</button>
+        <div class="form-popup" id="newproject">
+            <form action="" class="form-container" method="POST">
+                {% csrf_token %}
+                <h1>New project</h1>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required>
+
+                <button class="btn" type="submit">Save</button>
+                <button class="btn cancel">Cancel</button>
+            </form>
+        </div>
+        {% for project in myprojects %}
+            <a href="projects/{{project.id}}" class="project" >
+                <div>
+                    <h2>{{project.name}}</h2>
+                    <p>{{project.creation_date}}</p>
+                </div>
+            </a>
+
+
+        {% endfor %}
+    </section>
+    <script src="{% static 'assets/js/project.js' %}"></script>
+</body>
+</html>
