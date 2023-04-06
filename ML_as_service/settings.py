@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l-vsp&*k41y(p+jkwfsp7fvlgg0-j5!0&4!x5qvfr^9n3ny2(8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
 
 STATIC_URL ='/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -127,8 +127,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-CSRF_TRUSTED_ORIGINS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
