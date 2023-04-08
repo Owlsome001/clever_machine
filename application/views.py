@@ -59,8 +59,8 @@ def teaching(request):
             features= body['features']
             skill = body['skill']
             target = body['target']
-            project.target=target
-            project.skill=skill
+            # project.target=target
+            # project.skill=skill
             
             
             dataset= list(map(str.strip, body['file'].split('\r\n')))
@@ -75,10 +75,10 @@ def teaching(request):
             for x in features:
                 if x is None:
                     features.pop(features.index(x))
-            project.features=listToString(features)
-            dataset= open('data/data.csv','rb')
-            project.dataset.save("dataset_"+project.name+".csv",dataset)
-            project.save()
+            # project.features=listToString(features)
+            # dataset= open('data/data.csv','rb')
+            # project.dataset.save("dataset_"+project.name+".csv",dataset)
+            # project.save()
             
             dataset=pd.read_csv('data/data.csv')
             # TODO Clean data
@@ -95,8 +95,8 @@ def teaching(request):
                 classification(X,y, project.name)
             
             model= open('data/model.pkl','rb')
-            project.model.save("model_"+project.name+".pkl", model)
-            project.save()
+            # project.model.save("model_"+project.name+".pkl", model)
+            # project.save()
             return HttpResponse(json.dumps(result), content_type='application/json')
         if request.method == 'GET':
             return render(request, "teaching.html")
